@@ -1,4 +1,9 @@
-.skew-back {
+header {
+    position: relative;
+    height: 100vh;
+}
+
+.h-skew-back {
     z-index: -1;
     position: absolute;
     top: 0;
