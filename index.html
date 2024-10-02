@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="/public/assets/svg/code-slash.svg" type="image/x-icon">
   <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/pages/home/home.css">
   <title>Développement web</title>
 </head>
 
@@ -14,20 +15,20 @@
     <header>
       <div class="h-skew-back"></div>
       <div class="topbar">
-        <span class="logo">
+        <a href="#" class="logo">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fff" class="bi bi-code-slash"
             viewBox="0 0 16 16">
             <path
               d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0" />
           </svg>
-        </span>
+        </a>
         <nav id="navigation">
           <ul>
-            <li><a href="#" class="nav-link">Accueil</a></li>
-            <li><a href="#" class="nav-link">HTML</a></li>
-            <li><a href="#" class="nav-link">CSS</a></li>
-            <li><a href="#" class="nav-link">JavaScript</a></li>
-            <li><a href="#" class="nav-link">Autre</a></li>
+            <li><a href="#" class="nav-link" active>Accueil</a></li>
+            <li><a href="/pages/html.html" class="nav-link">HTML</a></li>
+            <li><a href="/pages/css.html" class="nav-link">CSS</a></li>
+            <li><a href="/pages/js.html" class="nav-link">JavaScript</a></li>
+            <li><a href="/pages/autre.html" class="nav-link">Autre</a></li>
           </ul>
         </nav>
         <button id="menuButton">
@@ -40,7 +41,73 @@
       </div>
     </header>
 
-    <main></main>
+
+
+
+
+    <main>
+      <div class="title">
+        <h1>Les bases du
+          <ul class="animate-title">
+            <li class="main">Developpement web</li>
+            <li class="main">HTML</li>
+            <li class="main">CSS</li>
+            <li class="main">JavaScript</li>
+          </ul>
+
+        </h1>
+        <p>Un site pour répertorier les bases à connaitre pour commencer a créer des applications web.</p>
+        <a href="#" class="start">Commence maintenant !</a>
+      </div>
+
+      <div class="content">
+        <section>
+          <aside>
+            <img src="./public/assets/images/mamie.jpg" alt="grand mere devant un ordinateur" draggable="false">
+          </aside>
+          <article>
+            <h2>Réalisable par <strong class="second">tout le monde</strong> !</h2>
+            <p>
+              Oui c'est à la porté de n'importe quelle personne <strong class="main">motivé</strong> qui s'en
+              donne les moyens !
+            </p>
+          </article>
+        </section>
+        <section>
+          <article>
+            <h2>Le <strong class="second">cursus</strong> à suivre</h2>
+            <p>
+              Le monde du developpement web et si vaste qu'il est au début très complexe de savoir par où
+              commencer.
+              Ce site à pour but de guider pas à pas <strong class="main">les bases nécessaires pour
+                débuter</strong>,
+              mais aussi partager du contenue permettant d'approfondirs les notions cités.
+            </p>
+          </article>
+          <aside>
+            <img src="./public/assets/images/languages.jpeg" alt="liste de languages de programmation pour le web"
+              draggable="false">
+          </aside>
+        </section>
+        <section>
+          <aside>
+            <img src="./public/assets/images/escargot.jpeg" alt="escargot sur un skate" draggable="false">
+          </aside>
+          <article>
+            <h2>Peut importe ton <strong class="second">rythme</strong> !</h2>
+            <p>
+              Chaque personne est unique, et apprend <strong class="main">à sa façon</strong> et <strong class="main">à
+                la
+                vitesse</strong> qu'il souhaite.
+            </p>
+          </article>
+        </section>
+      </div>
+    </main>
+
+
+
+
 
     <footer>
       <div class="f-skew-back"></div>
@@ -50,7 +117,7 @@
           <p>Ce site ne contient aucune mention legal,<br>par contre je siphonne toutes vos données !</p>
         </div>
         <div class="socials">
-          <h2>Suis moi sur <strong>Les réseaux</strong>:</h2>
+          <h2>Réseaux:</h2>
           <ul>
             <li>
               <div>

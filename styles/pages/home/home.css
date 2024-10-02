@@ -1,0 +1,159 @@
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.title {
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    margin: 35vh 0 40vh 5rem;
+    gap: 1rem;
+    color: white;
+    user-select: none;
+
+    h1 {
+        position: relative;
+        font-size: 3rem;
+        font-weight: 900;
+
+        .animate-title {
+            position: absolute;
+            top: -5%;
+            padding-inline: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            display: inline-block;
+
+            height: 4rem;
+            line-height: 5rem;
+            overflow: hidden;
+
+            li {
+                width: fit-content;
+                white-space: nowrap;
+                animation: titleSpin 10s infinite;
+            }
+        }
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+.start {
+    width: fit-content;
+    margin-top: 5rem;
+    z-index: 10;
+    color: white;
+    text-shadow: black 0 0 3px;
+    font-weight: 700;
+    background-color: var(--c3);
+    border-radius: 1rem;
+    padding: 1em;
+    transition: transform, filter;
+    transition-duration: 250ms;
+
+    &:hover {
+        transform: scale(105%);
+        filter: brightness(110%);
+    }
+}
+
+
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 25vh;
+    margin-bottom: 25vh;
+}
+
+section {
+    padding-inline: 5rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    gap: 5rem;
+
+    article {
+        align-content: center;
+        width: 50%;
+    }
+
+    aside {
+        width: 50%;
+
+        img {
+            border-radius: 3rem;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+@keyframes titleSpin {
+
+    0%,
+    10% {
+        transform: translateY(0%);
+    }
+
+    20%,
+    30% {
+        transform: translateY(-100%);
+    }
+
+    40%,
+    50% {
+        transform: translateY(-200%);
+    }
+}
+
+@media (max-width: 950px) {
+    .title {
+        margin: 35vh 0 40vh 1rem;
+
+        h1 {
+            font-size: 1.5rem;
+
+            .animate-title {
+                top: -5%;
+                height: 2rem;
+                line-height: 2.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    section {
+        flex-direction: column;
+        align-items: center;
+
+        &:nth-child(even) {
+            flex-direction: column-reverse;
+        }
+
+        article {
+            align-content: center;
+            width: 100%;
+        }
+
+        aside {
+            width: 100%;
+
+            img {
+                border-radius: 3rem;
+                width: 100%;
+            }
+        }
+    }
+}

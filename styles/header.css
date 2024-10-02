@@ -1,6 +1,5 @@
 header {
     position: relative;
-    height: 100vh;
 }
 
 .h-skew-back {
@@ -16,6 +15,7 @@ header {
 }
 
 .topbar {
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
@@ -25,7 +25,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(8px);
 }
 
 .logo {
@@ -92,6 +92,10 @@ header {
                         transform: scaleX(100%);
                         background-color: var(--c2);
                     }
+                }
+
+                &:active {
+                    color: var(--c2);
                 }
 
             }
