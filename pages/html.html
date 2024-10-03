@@ -5,7 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/public/assets/svg/code-slash.svg" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/pages/html/html.css">
     <title>Développement web</title>
 </head>
 
@@ -46,7 +51,216 @@
 
 
         <main>
+            <div class="title">
+                <h1>Le <strong class="main">HTML</strong></h1>
+                <p>"La structure du site."</p>
+            </div>
 
+            <section>
+                <article>
+                    <h2>Le HTML <strong class="main">c'est quoi</strong> ?</h2>
+                    <p>
+                        Le HTML (<strong class="second">HyperText Markup Language</strong>) est le langage standard
+                        utilisé pour
+                        structurer le contenu des pages web. Il permet de définir des titres, des paragraphes, des
+                        images, des liens et
+                        bien plus encore. Il fonctionne en organisant des éléments appelés <strong
+                            class="second">balises</strong>, qui
+                        sont souvent imbriquées les unes dans les autres, comme des "boîtes dans des boîtes".
+                    </p>
+                </article>
+                <aside>
+                    <p class="lore">
+                        Voici un exemple de base en HTML :
+                    </p>
+                    <pre><code class="html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="fr"&gt;
+                          &lt;head&gt;
+                            &lt;title&gt;Mon site web&lt;/title&gt;
+                          &lt;/head&gt;
+                          &lt;body&gt;
+                            &lt;h1&gt;Bonjour le monde&lt;/h1&gt;
+                          &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code></pre>
+                </aside>
+            </section>
+            <section>
+                <aside>
+                    <p class="lore">
+                        Exemple des bonne pratique:
+                    </p>
+                    <pre><code class="html">
+                        &lt;!DOCTYPE html&gt;
+                        &lt;html lang="fr"&gt;
+                          &lt;head&gt;
+                            &lt;meta charset="UTF-8"&gt; <!-- Spécifie l'encodage du document -->
+                            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; <!-- Responsive design -->
+                            &lt;title&gt;Exemple de bonnes pratiques HTML&lt;/title&gt;
+                          &lt;/head&gt;
+                          &lt;body&gt;
+                            &lt;header&gt;
+                              &lt;h1&gt;Bienvenue sur mon site&lt;/h1&gt;
+                            &lt;/header&gt;
+                        
+                            &lt;main&gt;
+                              &lt;article&gt;
+                                &lt;h2&gt;Pourquoi utiliser les balises sémantiques ?&lt;/h2&gt;
+                                &lt;p&gt;Les balises sémantiques aident à structurer correctement le contenu.&lt;/p&gt;
+                                &lt;img src="image.jpg" alt="Description de l'image" /&gt; <!-- Bonne pratique: toujours ajouter alt -->
+                              &lt;/article&gt;
+                            &lt;/main&gt;
+                        
+                            &lt;footer&gt;
+                              &lt;p&gt;&copy; 2024 Mon Site Web&lt;/p&gt;
+                            &lt;/footer&gt;
+                          &lt;/body&gt;
+                        &lt;/html&gt;
+                    </code></pre>
+                </aside>
+                <article>
+                    <h2><strong class="main">Bonnes pratiques</strong> en HTML</h2>
+                    <ul class="list-style">
+                        <li>
+                            <strong class="second">Utiliser des balises sémantiques</strong> : Préférez des balises
+                            comme
+                            <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code> plutôt
+                            que des
+                            <code>&lt;div&gt;</code> génériques. Cela améliore la lisibilité du code et l'accessibilité.
+                        </li>
+                        <li>
+                            <strong class="second">Bien structurer le code</strong> : Organisez votre HTML en utilisant
+                            l'indentation
+                            correcte
+                            pour que le code soit lisible et maintenable.
+                        </li>
+                        <li>
+                            <strong class="second">Utiliser des attributs alt pour les images</strong> : Ajoutez
+                            toujours une
+                            description
+                            alternative avec l'attribut <code>alt</code> pour les images afin de rendre la page
+                            accessible aux
+                            personnes utilisant des lecteurs d'écran.
+                        </li>
+                        <li>
+                            <strong class="second">Minimiser les répétitions</strong> : Utilisez les classes CSS ou les
+                            identifiants
+                            <code>id</code> pour appliquer des styles communs à plusieurs éléments, au lieu de répéter
+                            le code.
+                        </li>
+                        <li>
+                            <strong class="second">Valider votre code</strong> : Utilisez des outils comme le validateur
+                            W3C pour
+                            vérifier que
+                            votre HTML est conforme aux standards.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h2><strong class="main">Accessibilité</strong> en HTML</h2>
+                    <p>L'accessibilité est un aspect crucial du développement web, garantissant que votre site soit
+                        utilisable par tous, y compris les personnes en situation de handicap.</p>
+                    <ul class="list-style">
+                        <li>
+                            <strong class="second">Utiliser des attributs ARIA</strong> : Les attributs ARIA (Accessible
+                            Rich Internet Applications) aident à rendre les interfaces plus compréhensibles pour les
+                            technologies d'assistance. Par exemple, <code>role</code> et <code>aria-label</code> peuvent
+                            être utilisés pour décrire les éléments de l'interface utilisateur.
+                        </li>
+                        <li>
+                            <strong class="second">S'assurer d'un bon contraste</strong> : Vérifiez que le contraste
+                            entre le texte et le fond est suffisant pour les utilisateurs malvoyants. Des outils comme
+                            <code>Contrast Checker</code> peuvent vous aider à mesurer cela.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+            <section>
+                <aside>
+                    <p class="lore">Exemple de formulaire HTML :</p>
+                    <pre><code class="html">
+                    &lt;form action="/envoyer" method="POST"&gt;
+                      &lt;label for="nom"&gt;Nom:&lt;/label&gt;
+                      &lt;input type="text" id="nom" name="nom" required&gt;
+            
+                      &lt;label for="email"&gt;Email:&lt;/label&gt;
+                      &lt;input type="email" id="email" name="email" required&gt;
+            
+                      &lt;label for="message"&gt;Message:&lt;/label&gt;
+                      &lt;textarea id="message" name="message" required&gt;&lt;/textarea&gt;
+            
+                      &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
+                    &lt;/form&gt;
+                    </code></pre>
+                </aside>
+                <article>
+                    <h2>Les <strong class="main">formulaires</strong> en HTML</h2>
+                    <p>
+                        Les formulaires en HTML permettent aux utilisateurs d'interagir avec un site web en envoyant des
+                        données, comme des informations de contact ou des commentaires.
+                        Ils sont composés de différents éléments, tels que les <strong class="second">champs de
+                            texte</strong>, les <strong class="second">cases à cocher</strong>, les <strong
+                            class="second">boutons radio</strong> et les <strong class="second">boutons
+                            d'envoi</strong>. Chaque élément du formulaire est enveloppé dans une balise
+                        <code>&lt;form&gt;</code> qui définit comment et où les données doivent être envoyées.
+                    </p>
+                </article>
+            </section>
+            <section>
+                <article>
+                    <h2><strong class="main">Gestion des médias</strong> en HTML</h2>
+                    <ul class="list-style">
+                        <li>
+                            <strong class="second">Utiliser des formats d'images optimisés</strong> : Pour améliorer la
+                            vitesse de chargement, utilisez des formats modernes comme <code>WebP</code> ou
+                            <code>AVIF</code> pour les images. N'oubliez pas de spécifier les attributs
+                            <code>width</code> et <code>height</code> pour éviter le changement de mise en page lors du
+                            chargement.
+                        </li>
+                        <li>
+                            <strong class="second">Balise <code>&lt;video&gt;</code></strong> : Pour ajouter des vidéos,
+                            utilisez la balise <code>&lt;video&gt;</code> et fournissez plusieurs formats de vidéos pour
+                            une compatibilité maximale entre navigateurs.
+                        </li>
+                    </ul>
+                </article>
+                <aside>
+                    <p class="lore">Exemple de gestion des médias en HTML :</p>
+                    <pre><code class="html">
+                        &lt;!-- Insertion d'une image avec balise alt et dimensions définies --&gt;
+                        &lt;img src="image.webp" alt="Description de l'image" width="600" height="400" /&gt;
+                    
+                        &lt;!-- Utilisation de la balise video pour intégrer une vidéo --&gt;
+                        &lt;video controls width="600"&gt;
+                        &lt;source src="video.mp4" type="video/mp4"&gt;
+                        &lt;source src="video.webm" type="video/webm"&gt;
+                        Votre navigateur ne supporte pas la balise vidéo.
+                        &lt;/video&gt;
+                    
+                        &lt;!-- Inclusion d'une balise audio pour jouer de l'audio --&gt;
+                        &lt;audio controls&gt;
+                        &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+                        &lt;source src="audio.ogg" type="audio/ogg"&gt;
+                        Votre navigateur ne supporte pas la balise audio.
+                        &lt;/audio&gt;
+                    </code></pre>
+                </aside>
+            </section>
+            <section>
+                <article>
+                    <h2><strong class="main">Ressources utiles</strong></h2>
+                    <ul class="list-style">
+                        <li><a href="https://validator.w3.org/">Validateur W3C</a> : Vérifiez la conformité de votre
+                            code HTML.</li>
+                        <li><a href="https://wave.webaim.org/">WAVE</a> : Testez l'accessibilité de votre site web.</li>
+                        <li><a href="https://web.dev/">Google Web Dev</a> : Outils et conseils pour améliorer la
+                            performance et l'accessibilité de votre site.</li>
+                    </ul>
+                </article>
+            </section>
         </main>
 
 
@@ -103,6 +317,11 @@
         </footer>
     </div>
     <script src="/src/main.js"></script>
+    <script src="/src/code-form.js"></script>
+    <script>
+
+
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,64 @@
+main {
+    display: flex;
+    color: white;
+    gap: 20vh;
+    margin-bottom: 20vh;
+}
+
+.title {
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+    margin: 35vh 0 60vh 5rem;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+pre code {
+    width: fit-content;
+    max-width: 80vw;
+    border-radius: 2rem;
+    overflow: auto;
+}
+
+
+section {
+    display: flex;
+    align-items: center;
+    padding-inline: 3rem;
+    gap: 3rem;
+}
+
+.lore {
+    padding: 1rem;
+}
+
+.list-style {
+    list-style: circle;
+    padding-left: 1rem;
+}
+
+@media (max-width: 1000px) {
+    section {
+        flex-direction: column;
+
+
+        &:nth-child(odd) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    pre code {
+        border-radius: 2rem 2rem 0 0;
+    }
+}

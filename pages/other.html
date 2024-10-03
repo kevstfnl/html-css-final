@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/public/assets/svg/code-slash.svg" type="image/x-icon">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/pages/other/other.css">
     <title>Développement web</title>
 </head>
 
 <body>
     <div id="app">
+
         <header>
             <div class="h-skew-back"></div>
             <div class="topbar">
@@ -41,17 +43,34 @@
             </div>
         </header>
 
-
-
-
-
         <main>
+            <div class="title">
+                <h1><strong class="main">Contacte</strong> et liens <strong class="main">annexe</strong></h1>
+                <p>Tu peux me contacter et visiter les liens anexe depuis cette page.</p>
+            </div>
 
+            <section>
+                <h2>Me contacter:</h2>
+                <form action="" method="post">
+                    <div class="input-box">
+                        <input type="text" name="name" id="name" placeholder="">
+                        <label for="name">Nom</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="mail-input" id="mail-input" placeholder="">
+                        <label for="mail-input">E-Mail</label>
+                    </div>
+                    <div class="input-box">
+                        <textarea name="message" id="message" placeholder=""></textarea>
+                        <label for="message">Messages</label>
+                    </div>
+                    <div class="btn-form">
+                        <button type="reset">Annuler</button>
+                        <button>Envoyer</button>
+                    </div>
+                </form>
+            </section>
         </main>
-
-
-
-
 
         <footer>
             <div class="f-skew-back"></div>
