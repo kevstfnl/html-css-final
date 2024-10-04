@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/public/assets/svg/code-slash.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/svg/code-slash.svg" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/content.css">
     <title>Développement web</title>
 </head>
 
@@ -25,7 +30,7 @@
                     <ul>
                         <li><a href="../index.html" class="nav-link">Accueil</a></li>
                         <li><a href="./html.html" class="nav-link">HTML</a></li>
-                        <li><a href="#" class="nav-link" active>CSS</a></li>
+                        <li><a href="#" class="nav-link">CSS</a></li>
                         <li><a href="./js.html" class="nav-link">JavaScript</a></li>
                         <li><a href="./other.html" class="nav-link">Autre</a></li>
                     </ul>
@@ -46,8 +51,149 @@
 
 
         <main>
+            <div class="title">
+                <h1>Le <strong class="main">CSS</strong></h1>
+                <p>"La présentation du site."</p>
+            </div>
 
+            <section>
+                <article>
+                    <h2>Le CSS <strong class="main">c'est quoi</strong> ?</h2>
+                    <p>
+                        Le CSS (<strong class="second">Cascading Style Sheets</strong>) est un langage de style utilisé
+                        pour
+                        décrire l'apparence et le formatage d'un document HTML. Il permet de contrôler les couleurs, les
+                        polices,
+                        les espacements et bien d'autres aspects visuels des pages web. Le CSS fonctionne en ciblant des
+                        éléments HTML à l'aide de sélecteurs et en leur appliquant des propriétés et des valeurs.
+                    </p>
+                </article>
+                <aside>
+                    <p class="lore">
+                        Voici un exemple de base en CSS :
+                    </p>
+                    <pre><code class="css">
+                        /* Exemple de règles CSS de base */
+                        body {
+                            font-family: Arial, sans-serif;
+                            background-color: #f4f4f4;
+                        }
+                        
+                        h1 {
+                            color: #333;
+                        }
+                    </code></pre>
+                </aside>
+            </section>
+
+            <section>
+                <article>
+                    <h2><strong class="main">Bonnes pratiques</strong> en CSS</h2>
+                    <ul class="list-style">
+                        <li>
+                            <strong class="second">Utiliser des sélecteurs spécifiques</strong> : Privilégiez les
+                            sélecteurs de
+                            classe et d'identifiant pour cibler des éléments spécifiques plutôt que d'utiliser des
+                            sélecteurs
+                            globaux qui peuvent affecter d'autres éléments.
+                        </li>
+                        <li>
+                            <strong class="second">Organiser le code CSS</strong> : Structurez vos fichiers CSS en
+                            sections logiques
+                            et commentez votre code pour faciliter la maintenance.
+                        </li>
+                        <li>
+                            <strong class="second">Utiliser des unités relatives</strong> : Privilégiez les unités comme
+                            <code>em</code>
+                            ou <code>rem</code> pour les tailles de police et les espacements afin d'améliorer la
+                            réactivité.
+                        </li>
+                        <li>
+                            <strong class="second">Minimiser l'utilisation d'ID</strong> : Évitez d'utiliser des
+                            identifiants
+                            sauf si nécessaire, car ils sont trop spécifiques et limitent la réutilisation.
+                        </li>
+                        <li>
+                            <strong class="second">Valider votre code CSS</strong> : Utilisez des outils en ligne pour
+                            vérifier
+                            la validité de votre CSS et éviter les erreurs.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <h2><strong class="main">Accessibilité</strong> en CSS</h2>
+                    <p>L'accessibilité est essentielle pour garantir que votre site soit agréable à utiliser pour tous.
+                        Voici
+                        quelques pratiques recommandées :</p>
+                    <ul class="list-style">
+                        <li>
+                            <strong class="second">Contraste des couleurs</strong> : Assurez-vous que le contraste entre
+                            le texte
+                            et l'arrière-plan est suffisant pour les utilisateurs malvoyants.
+                        </li>
+                        <li>
+                            <strong class="second">Utiliser des classes CSS pour les styles</strong> : Évitez d'utiliser
+                            des
+                            styles en ligne afin de garder votre HTML propre et accessible.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <h2><strong class="main">Gestion des médias</strong> en CSS</h2>
+                    <ul class="list-style">
+                        <li>
+                            <strong class="second">Utiliser les media queries</strong> : Les media queries permettent de
+                            créer des styles réactifs qui s'adaptent à différentes tailles d'écran.
+                        </li>
+                        <li>
+                            <strong class="second">Optimisation des images</strong> : Utilisez des classes CSS pour
+                            gérer la
+                            taille et l'affichage des images pour garantir une bonne performance.
+                        </li>
+                    </ul>
+                </article>
+                <aside>
+                    <p class="lore">Exemple de gestion des médias en CSS :</p>
+                    <pre><code class="css">
+                        /* Media query pour les écrans plus petits */
+                        @media (max-width: 600px) {
+                            body {
+                                font-size: 14px;
+                            }
+                        }
+                        
+                        /* Style pour les images */
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    </code></pre>
+                </aside>
+            </section>
+
+            <section>
+                <article>
+                    <h2><strong class="main">Ressources utiles</strong></h2>
+                    <ul class="list-style">
+                        <li><a href="https://css-validator.org/" target="_blank">Validateur CSS</a> : Vérifiez la
+                            conformité
+                            de votre code CSS.</li>
+                        <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a> : Articles
+                            et
+                            tutoriels sur le design web et le CSS.</li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a> : Un site complet avec des
+                            astuces et des ressources sur le CSS.</li>
+                    </ul>
+                </article>
+            </section>
         </main>
+
 
 
 
@@ -103,6 +249,7 @@
         </footer>
     </div>
     <script src="/src/main.js"></script>
+    <script src="/src/code-form.js"></script>
 </body>
 
 </html>

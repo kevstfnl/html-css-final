@@ -3,14 +3,17 @@
     z-index: 1;
     flex-direction: column;
     margin: 35vh 0 40vh 5rem;
+    width: fit-content;
     gap: 1rem;
     color: white;
     user-select: none;
+
 
     h1 {
         position: relative;
         font-size: 3rem;
         font-weight: 900;
+        animation: slideRight 1s forwards;
 
         .animate-title {
             position: absolute;
@@ -34,6 +37,7 @@
 
     p {
         font-size: 1rem;
+        animation: slideRight 1s forwards;
     }
 }
 
@@ -49,6 +53,7 @@
     padding: 1em;
     transition: transform, filter;
     transition-duration: 250ms;
+    animation: pulseShadow 2s infinite;
 
     &:hover {
         transform: scale(105%);
@@ -85,10 +90,26 @@ section {
     }
 }
 
+@keyframes pulseShadow {
+
+    0%,
+    20% {
+        box-shadow: hsla(158, 82%, 50%, 1) 0 0 0;
+    }
+
+    70% {
+        box-shadow: hsla(158, 82%, 50%, 0) 0 0 5rem;
+    }
+
+    100% {
+        box-shadow: hsla(158, 82%, 50%, 0.0) 0 0 0;
+    }
+}
+
 @keyframes titleSpin {
 
     0%,
-    10% {
+    30% {
         transform: translateY(0%);
     }
 
@@ -97,9 +118,14 @@ section {
         transform: translateY(-100%);
     }
 
+    60%,
+    70% {
+        transform: translateY(-200%);
+    }
+
     80%,
     90% {
-        transform: translateY(-200%);
+        transform: translateY(-100%);
     }
 }
 

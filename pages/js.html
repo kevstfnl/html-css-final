@@ -5,6 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/public/assets/svg/code-slash.svg" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="/styles/content.css">
     <link rel="stylesheet" href="/styles/style.css">
     <title>Développement web</title>
 </head>
@@ -26,7 +31,7 @@
                         <li><a href="../index.html" class="nav-link">Accueil</a></li>
                         <li><a href="./html.html" class="nav-link">HTML</a></li>
                         <li><a href="./css.html" class="nav-link">CSS</a></li>
-                        <li><a href="#" class="nav-link" active>JavaScript</a></li>
+                        <li><a href="#" class="nav-link">JavaScript</a></li>
                         <li><a href="./other.html" class="nav-link">Autre</a></li>
                     </ul>
                 </nav>
@@ -46,8 +51,146 @@
 
 
         <main>
+            <div class="title">
+                <h1>Le <strong class="main">JavaScript</strong></h1>
+                <p>"Le langage de la dynamique web."</p>
+            </div>
 
+            <section>
+                <article>
+                    <h2>Le JavaScript <strong class="main">c'est quoi</strong> ?</h2>
+                    <p>
+                        Le JavaScript est un langage de programmation interprété, principalement utilisé pour rendre les
+                        pages web interactives. Il permet d'ajouter des fonctionnalités dynamiques, comme des
+                        animations,
+                        des mises à jour de contenu en temps réel et la gestion d'événements utilisateurs. JavaScript
+                        est
+                        exécuté côté client dans le navigateur, ce qui signifie qu'il peut interagir directement avec le
+                        Document Object Model (DOM) d'une page web.
+                    </p>
+                </article>
+                <aside>
+                    <p class="lore">
+                        Voici un exemple de base en JavaScript :
+                    </p>
+                    <pre><code class="javascript">
+                        // Exemple de code JavaScript simple
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const message = 'Bonjour le monde !';
+                            alert(message);
+                        });
+                    </code></pre>
+                </aside>
+            </section>
+
+            <section>
+                <article>
+                    <h2><strong class="main">Bonnes pratiques</strong> en JavaScript</h2>
+                    <ul class="list-style">
+                        <li>
+                            <strong class="second">Utiliser des déclarations let et const</strong> : Préférez
+                            <code>let</code>
+                            et <code>const</code> à <code>var</code> pour déclarer des variables afin d'améliorer la
+                            lisibilité et la portée du code.
+                        </li>
+                        <li>
+                            <strong class="second">Modulariser le code</strong> : Divisez votre code en modules et
+                            utilisez des fonctions pour améliorer la réutilisabilité.
+                        </li>
+                        <li>
+                            <strong class="second">Éviter les effets de bord</strong> : Conservez l'intégrité de vos
+                            fonctions en évitant de modifier des variables externes.
+                        </li>
+                        <li>
+                            <strong class="second">Utiliser les promesses et async/await</strong> : Pour gérer les
+                            appels
+                            asynchrones, utilisez des promesses et la syntaxe <code>async/await</code> pour un code plus
+                            lisible.
+                        </li>
+                        <li>
+                            <strong class="second">Commenter le code</strong> : Ajoutez des commentaires pour expliquer
+                            le
+                            fonctionnement de votre code et améliorer la compréhension pour vous et les autres.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <h2><strong class="main">Accessibilité</strong> en JavaScript</h2>
+                    <p>L'accessibilité est essentielle pour garantir que votre site web est utilisable par tous. Voici
+                        quelques
+                        bonnes pratiques :</p>
+                    <ul class="list-style">
+                        <li>
+                            <strong class="second">Gérer les événements clavier</strong> : Assurez-vous que vos
+                            fonctionnalités sont accessibles via le clavier, en utilisant des événements comme
+                            <code>keydown</code>
+                            et <code>keyup</code>.
+                        </li>
+                        <li>
+                            <strong class="second">Informer les utilisateurs</strong> : Utilisez des alertes et des
+                            messages
+                            pour informer les utilisateurs des changements d'état ou des erreurs.
+                        </li>
+                    </ul>
+                </article>
+            </section>
+
+            <section>
+                <article>
+                    <h2><strong class="main">Gestion des médias</strong> en JavaScript</h2>
+                    <ul class="list-style">
+                        <li>
+                            <strong class="second">Manipuler les éléments multimédias</strong> : Utilisez JavaScript
+                            pour
+                            contrôler la lecture, la pause et le volume des vidéos et des fichiers audio sur votre site.
+                        </li>
+                        <li>
+                            <strong class="second">Utiliser les API pour l'interaction multimédia</strong> : Profitez
+                            des
+                            API Web, comme l'API <code>MediaRecorder</code>, pour manipuler les médias de manière
+                            avancée.
+                        </li>
+                    </ul>
+                </article>
+                <aside>
+                    <p class="lore">Exemple de gestion des médias en JavaScript :</p>
+                    <pre><code class="javascript">
+                        // Contrôle d'une vidéo
+                        const video = document.getElementById('maVideo');
+                        
+                        function playVideo() {
+                            video.play();
+                        }
+                        
+                        function pauseVideo() {
+                            video.pause();
+                        }
+                        
+                        // Ajouter des événements aux boutons
+                        document.getElementById('playBtn').addEventListener('click', playVideo);
+                        document.getElementById('pauseBtn').addEventListener('click', pauseVideo);
+                    </code></pre>
+                </aside>
+            </section>
+
+            <section>
+                <article>
+                    <h2><strong class="main">Ressources utiles</strong></h2>
+                    <ul class="list-style">
+                        <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript" target="_blank">MDN Web
+                                Docs</a> : Documentation complète sur JavaScript.</li>
+                        <li><a href="https://javascript.info/" target="_blank">JavaScript.info</a> : Tutoriels et
+                            articles sur JavaScript moderne.</li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a> : Bien qu'axé sur le CSS,
+                            il offre aussi de bons articles sur JavaScript.</li>
+                    </ul>
+                </article>
+            </section>
         </main>
+
 
 
 
@@ -103,6 +246,7 @@
         </footer>
     </div>
     <script src="/src/main.js"></script>
+    <script src="/src/code-form.js"></script>
 </body>
 
 </html>

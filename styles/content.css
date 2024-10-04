@@ -11,6 +11,8 @@ main {
     flex-direction: column;
     margin: 35vh 0 60vh 5rem;
     gap: 1rem;
+    width: fit-content;
+    animation: slideRight 1s forwards;
 }
 
 h1 {

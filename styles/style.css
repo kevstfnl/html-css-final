@@ -20,6 +20,7 @@ a {
 body {
     font-family: "Poppins", sans-serif;
     background-color: var(--bg-dark-1);
+    overflow-x: hidden;
 }
 
 #app {
@@ -32,11 +33,23 @@ body {
 }
 
 .second {
-    color: var(--c1);
+    color: var(--c3);
 }
 
 main {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

@@ -42,7 +42,7 @@ footer {
         height: 48px;
 
         a {
-            color: white;
+            color: var(--bg-dark-3);
 
             transition: color, transform;
             transition-duration: 250ms;
