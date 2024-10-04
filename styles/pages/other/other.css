@@ -92,6 +92,7 @@ input:focus~label {
         transition: transform, filter;
         transition-duration: 250ms;
 
+
         &[type="reset"] {
             background-color: var(--c2);
         }

@@ -108,25 +108,38 @@ section {
 
 @keyframes titleSpin {
 
+    100%,
     0%,
-    30% {
+    20% {
         transform: translateY(0%);
+    }
+
+    25%,
+    35% {
+        transform: translateY(-100%);
     }
 
     40%,
     50% {
-        transform: translateY(-100%);
-    }
-
-    60%,
-    70% {
         transform: translateY(-200%);
     }
 
-    80%,
+    55%,
+    65% {
+        transform: translateY(-300%);
+    }
+
+
+    70%,
+    80% {
+        transform: translateY(-200%);
+    }
+
+    85%,
     90% {
         transform: translateY(-100%);
     }
+
 }
 
 @media (max-width: 950px) {
