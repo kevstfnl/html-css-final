@@ -118,10 +118,12 @@ header {
         position: absolute;
         right: 0;
         display: block;
+        transform: rotate(270deg);
+
         transition: transform 250ms;
 
         &.active {
-            transform: rotate(180deg);
+            transform: rotate(90deg);
         }
     }
 
@@ -139,8 +141,6 @@ header {
 
             flex-direction: column;
             justify-content: center;
-
-
 
             li {
                 visibility: hidden;

@@ -50,6 +50,10 @@ section {
     padding-left: 1rem;
 }
 
+article ul li a {
+    color: var(--c3);
+}
+
 @media (max-width: 1000px) {
     section {
         flex-direction: column;
